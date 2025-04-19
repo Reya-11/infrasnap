@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: infrasnap-agent
+  namespace: infrasnap
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: infrasnap-agent
+  template:
+    metadata:
+      labels:
+        app: infrasnap-agent
+    spec:
+      containers:
+      - name: infrasnap-agent
+        image: infrasnap-agent:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3000
