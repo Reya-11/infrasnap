@@ -1,4 +1,4 @@
-Infrasnap - A snapshot of your computer processes 
+##Infrasnap - A snapshot of your computer processes 
 
 Objectives:
 
